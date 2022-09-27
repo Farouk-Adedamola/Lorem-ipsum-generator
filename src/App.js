@@ -1,6 +1,6 @@
-import "./App.css";
 import React, { Fragment, useState } from "react";
 import text from "./data";
+import classes from "./App.module.css";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,15 +12,19 @@ function App() {
     if (count <= 0) {
       amount = 1;
     }
-    if (count > 8) {
-      amount = 15;
+    if (count > 9) {
+      amount = 9;
     }
+    setCount(0);
+
     setLorem(text.slice(0, amount));
   };
   if (lorem.length > 0) {
     return (
-      <section>
-        <form onSubmit={submitHandler}>
+      <section className={classes.section}>
+        <h1>lorem ipsum generator</h1>
+        <form onSubmit={submitHandler} className={classes.form}>
+          <label>paragraphs :</label>
           <input
             type="number"
             id="amount"
@@ -28,42 +32,45 @@ function App() {
             value={count}
             onChange={(e) => setCount(e.target.value)}
           />
-          <button type="submit">Generate</button>
+          <button type="submit" className={classes.btn}>
+            Generate
+          </button>
         </form>
-        {lorem.map((item, index) => {
-          return (
-            <div key={index}>
-              <p>{item}</p>
-              {/* <button onClick={() => setLorem([])}>Clear all</button> */}
-            </div>
-          );
-        })}
-        <button onClick={() => setLorem([])}>Clear all</button>
+        <article>
+          {lorem.map((item, index) => {
+            return (
+              <div key={index} className={classes.article}>
+                <p>{item}</p>
+                {/* <button onClick={() => setLorem([])}>Clear all</button> */}
+              </div>
+            );
+          })}
+          <div className={classes.btnwrapper}>
+            <button onClick={() => setLorem([])} className={classes.clearbtn}>
+              Clear all
+            </button>
+          </div>
+        </article>
       </section>
     );
   }
   return (
     <Fragment>
-      <form onSubmit={submitHandler}>
-        <input
-          type="number"
-          id="amount"
-          name="count"
-          value={count}
-          onChange={(e) => setCount(e.target.value)}
-        />
-        <button type="submit">Generate</button>
-      </form>
-      <section>
-        {lorem.map((item, index) => {
-          return (
-            <div key={index}>
-              <p>{item}</p>
-              {/* <button onClick={() => setLorem([])}>Clear all</button> */}
-            </div>
-          );
-        })}
-      </section>
+      <main className={classes.section}>
+        <form onSubmit={submitHandler} className={classes.form}>
+          <h3>paragraphs :</h3>
+          <input
+            type="number"
+            id="amount"
+            name="count"
+            value={count}
+            onChange={(e) => setCount(e.target.value)}
+          />
+          <button type="submit" className={classes.btn}>
+            Generate
+          </button>
+        </form>
+      </main>
     </Fragment>
   );
 }

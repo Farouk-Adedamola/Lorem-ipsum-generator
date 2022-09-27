@@ -1,0 +1,71 @@
+/* #063251
+#A5D5F8
+#102a42
+#49a6e9 */
+
+@media screen and (min: 760px) {
+  .section {
+    max-width: 75vw;
+  }
+}
+
+.section h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.form {
+  display: flex;
+  margin: 1.7rem auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.form input {
+  width: 40px;
+  margin: 10px;
+  padding: 0.4rem 0.4rem;
+  border-radius: 3px;
+  color: #49a6e9;
+  background: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+}
+
+.form label {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.btn,
+.clearbtn {
+  color: #063251;
+  background: #49a6e9;
+  border: none;
+  padding: 0.45rem 0.6rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: 3px;
+}
+
+.article {
+  width: 90vw;
+  max-width: 600px;
+  margin: 0 auto 0 auto;
+}
+
+.article p {
+  font-size: small;
+  text-align: center;
+  color: #063251;
+}
+
+.btnwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
