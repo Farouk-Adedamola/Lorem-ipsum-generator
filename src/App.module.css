@@ -1,25 +1,23 @@
-/* #063251
-#A5D5F8
-#102a42
-#49a6e9 */
-
 @media screen and (min: 760px) {
   .section {
     max-width: 75vw;
   }
+  .section h1 {
+    font-size: 2rem;
+  }
 }
 
 .section h1 {
+  margin: 3rem 0 2rem 0;
   text-align: center;
   text-transform: capitalize;
-  font-size: 2rem;
 }
 
 .form {
   display: flex;
-  margin: 1.7rem auto;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .form input {

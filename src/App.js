@@ -24,7 +24,7 @@ function App() {
       <section className={classes.section}>
         <h1>lorem ipsum generator</h1>
         <form onSubmit={submitHandler} className={classes.form}>
-          <label>paragraphs :</label>
+          <label htmlFor="amount">paragraphs :</label>
           <input
             type="number"
             id="amount"
@@ -58,7 +58,7 @@ function App() {
     <Fragment>
       <main className={classes.section}>
         <form onSubmit={submitHandler} className={classes.form}>
-          <h3>paragraphs :</h3>
+          <label htmlFor="amount">paragraphs :</label>
           <input
             type="number"
             id="amount"
