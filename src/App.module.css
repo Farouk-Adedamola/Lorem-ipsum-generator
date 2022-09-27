@@ -49,6 +49,11 @@
   border-radius: 3px;
 }
 
+.btn:hover {
+  color: #49a6e9;
+  background: #afd5f8;
+}
+
 .article {
   width: 90vw;
   max-width: 600px;
